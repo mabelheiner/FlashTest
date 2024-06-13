@@ -7,14 +7,12 @@ async function getTerms() {
   if (response.ok){
     const data = await response.json()
     const terms = JSON.stringify(data)
-    const list = JSON.parse(terms)
-    console.log('List', list)
-    console.log('Item', list[0])
+    const list = terms.split(',')
     list.map((item) =>{
       document.querySelector('#app').innerHTML +=
-        `<li>${item.term}</li>
-        <li>${item.definition}</li>`
+        `<li>${item}}</li>`
     })
+    
   }}
   catch (error) {
     document.querySelector('#app').innerHTML = 
