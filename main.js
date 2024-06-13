@@ -2,7 +2,7 @@ import './style.css'
 
 async function getTerms() {
   try{
-  const response = await fetch('https://flashcards-w643.onrender.com/flashcards/')
+  const response = await fetch('https:flashcards-w643.onrender.com/flashcards')
   console.log("hello")
   if (response.ok){
     const data = await response.json()
